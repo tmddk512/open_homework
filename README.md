@@ -200,9 +200,11 @@
 > 
 > ps --version : 버전 정보를 출력한다.
 
-### jobs
+### +jobs
 ***쓰는 방법***
+
 ***jobs [옵션][jobID...]***
+
 ***jobs -x command [args]***
 >-l : 프로세스 그룹 ID를 state 필드 앞에 출력한다.
 >
