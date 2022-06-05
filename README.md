@@ -19,7 +19,7 @@
 > 
 
 ### ps
-**전체 프로세스와 관련된 옵션**
+***전체 프로세스와 관련된 옵션***
 > ps -A: 모든 프로세스를 출력한다.
 > 
 > ps -N : -A 옵션과 비슷하나 ps 프로세스를 제외하고 출력한다.
@@ -39,3 +39,74 @@
 > ps x : 터미널이 없는 프로세스를 출력한다.
 > 
 > ps --deselect : -N 옵션과 같다.
+
+***특정 프로세스를 선택하여 보여주는 옵션***
+> ps -C : 지정한 명령어의 이름에 관련된 정보를 출력한다.
+>
+> ps -G : 그룹 ID에 관련된 정보를 출력한다(이름도 지원).
+>
+> ps -U : 사용자 ID에 관련된 정보를 출력한다(이름도 지원).
+>
+> ps -g : 지정한 세션 리더 혹은 그룹명에 관련한 정보를 출력한다.
+>
+> ps -p : 프로세스 ID를 출력한다.
+>
+> ps -s : 세션에 속한 프로세스를 지정한다.
+>
+> ps -t : tty를 지정한다.
+>
+> ps -u : 사용자 ID를 지정한다(이름도 지원).
+>
+> ps U : 지정한 사용자의 프로세스를 출력한다.
+>
+> ps p : 프로세스 ID를 지정한다.
+> 
+> ps t : tty를 지정한다.
+> 
+> ps --Group : 실제 그룹 이름이나 ID를 지정한다.
+> 
+> ps --User : 실제 사용자 이름이나 ID를 지정한다.
+> 
+> ps --group : 유효 사용자 이름이나 ID를 지정한다.
+> 
+> ps --pid : 프로세스 ID를 지정한다.
+> 
+> ps --sid : 세션 ID를 지정한다.
+
+--tty : 터미널을 지정한다.
+--user : 유효 사용자 이름이나 ID를 지정한다.
+-123 : --sid 123과 같은 의미이다.
+123 : --pid 123과 같은 의미이다.
+
+***출력 결과 필드를 제어하는 옵션***
+> ps -0 : PID, TTY, STAT, TIME, COMMAND 등의 필드 목록을 출력한다.
+> 
+> ps -c : PID, CLS, PRI, TTY, TIME. CMD 등의 필드 목록을 출력한다.
+> 
+> ps -f : UID, PID, PPID, C, STIME, TTY, TIME, CMD 등의 필드를 CMD 필드의 전체 명령어 형태로 출력한다.
+> 
+> ps -j : PID, PGID, SID, TTY, TIME, CMD 등의 필드 목록을 출력한다.
+> 
+> ps -l : F, S, UID, PID, PPID, C, PRI, NI, ADDR, SZ, WCHAN, TTY, TIME, CMD 필드의 상세 정보를 출력한다.
+> 
+> ps -o : 사용자가 정의한 포맷을 지정한다.
+> 
+> ps -y : -l 이나 l 옵션과 함께 ADDR 필드를 RSS 필드로 출력한다.
+> 
+> ps 0 : PID, TTY, STAT, IME COMMAND 필드 정보를 출력한다.
+> 
+> ps X : PID, STACKP, ESP, EIP, TMOUT, ALARM, STAT, TTY, TIME, COMMAND 필드의 정보를 리눅스 i386 레지스터 형식으로 출력한다.
+> 
+> ps j : PPID, PID, PGID, SID, TTY, TPGID, STAT, UID, TIME, COMMAND 필드의 정보를 작업 제어에 관련된 형식으로 출력한다.
+> 
+> ps l : F, S, UID, PID, PPID, C, PRI, NI, ADDR, SZ, PSS, WCHAN, TTY, TIME, CMD 필드의 정보를 출력하고 -l 옵션과 함께 PSS 필드를 추가하여 출력한다.
+> 
+> ps o : 사용자 지정 형식으로 출력한다.
+> 
+> ps s : UID, PID, PENDING, BLOCKED, IGNORED, CAUGHT, STAT, TTY, TIME, COMMAND 필드의 정보를 출력한다.
+> 
+> ps u : USER, PID, %CPU, %MEM, VSZ, RSS, TTY, STAT, START, TIME, COMMAND 필드의 정보를 출력한다.
+> 
+> ps v : PID, TTY, STAT, TIME, MAJFL, TRS, DRS, RSS, %MEM, COMMAND 필드의 정보를 출력한다.
+> 
+> ps --format : 사용자 지정 형식으로 출력한다.
